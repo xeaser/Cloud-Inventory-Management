@@ -130,3 +130,9 @@ dmypy.json
 
 # Ignore .idea files
 .idea/
+
+# Ignore .vscode files
+.vscode/
+
+# Ignore VSCODE Workspace files
+CIM.code-workspace
