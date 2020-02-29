@@ -8,6 +8,7 @@ Use the pip to install requirements for the project.
 
 ```bash
 pip install requirements.txt
+python run.py
 ```
 
 
