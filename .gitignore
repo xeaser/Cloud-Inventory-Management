@@ -135,4 +135,4 @@ dmypy.json
 .vscode/
 
 # Ignore VSCODE Workspace files
-CIM.code-workspace
+*.code-workspace

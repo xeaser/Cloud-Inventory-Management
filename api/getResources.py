@@ -1,6 +1,7 @@
 from flask_restful import Resource, abort
 
-from Base.common import enums
+from Base.apiWrapper import importApi
+# from Base.common.enums import CloudConnectors
 from Exceptions.ConnectorException import NotSupportedException
 
 
@@ -11,7 +12,6 @@ class GetResources(Resource):
         try:
             if cloud_connector < 1 or cloud_connector > 3:
                 raise NotSupportedException
-            connector = enums.CloudConnectors(cloud_connector)
-            return {"message": "Hello, " + connector.name}
+            return {"regions": importApi(cloud_connector)}
         except NotSupportedException:
             abort(400, message="Not Supported")
