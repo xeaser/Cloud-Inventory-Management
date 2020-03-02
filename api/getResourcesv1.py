@@ -22,7 +22,7 @@ def resources(cloud_connector):
         if cloud_connector < 1 or cloud_connector > 3:
             raise NotSupportedException
         connector = enums.CloudConnectors(cloud_connector)
-        return {"Hello, " + connector.name}
+        return "Hello, " + connector.name
     except NotSupportedException:
         abort(400, "Not Supported")
 
